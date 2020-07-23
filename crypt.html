@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head><title>cryptography</title></head>
+<body>
+    <input type="text" placeholder="enter your msg" id="myinput">
+	<button onclick="encript()">encrypt</button>
+	<div id="result"></div>
+	<script>
+	    function encript(){
+		     var rawtext = document.getElementById("myinput").value;
+			 var temptext = "";
+			 for(i = 0; i < rawtext.length; i++)
+			 {
+			 temptext += enc(rawtext[i]);
+			 }
+			 document.getElementById("result").innerHTML = temptext;
+			 }
+			 function enc(x){
+			 switch(x){
+			 case "a" :
+			 return "100";
+			 break;
+			  case "b" :
+			 return "150";
+			 break;
+			 }
+			 }
+	</script>
+</body>
+</html>
